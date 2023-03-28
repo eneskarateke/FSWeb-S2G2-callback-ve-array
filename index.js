@@ -54,11 +54,14 @@ console.log(Finaller(fifaData));
 	3. Finaller data setindeki tüm yılları içeren "years" adındaki diziyi(array) döndürecek
 	*/
 
-function Yillar() {
+function Yillar(dizi, callback) {
 	
-    /* kodlar buraya */
-}
+    const gericagirim = callback(dizi)
+	const years = gericagirim.map(val => val.Year)
 
+	return years
+}
+console.log(Yillar(fifaData,Finaller));
 
 /*  Görev 4: 
 	Bir higher-order fonksiyonunu olan Kazananlar isimli fonksiyona aşağıdakileri uygulayın:  
